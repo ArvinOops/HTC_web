@@ -1,0 +1,66 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Build outputs (uncomment dist/ if you don't want to deploy)
+build/
+# dist/
+*.min.js
+*.min.css
+
+# Environment files
+.env
+.env.local
+.env.production
+.env.development
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Cache
+.cache/
+.parcel-cache/
+.sass-cache/
+
+# Testing
+coverage/
+.nyc_output/
+
+# Unused assets and templates
+src/assets/img/team/
+src/assets/img/portfolio/
+src/assets/img/about/
+src/assets/img/logos/
+src/pug/includes/portfolio-modal-*.pug
+src/scss/sections/_team.scss
+src/scss/sections/_portfolio.scss
+src/scss/sections/_contact.scss
+src/scss/sections/_timeline.scss
