@@ -216,6 +216,32 @@
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- 👇 訪客統計（滑鼠移過才顯示） -->
+        <style>
+        #visitors {
+            position: fixed;
+            bottom: 8px;
+            right: 12px;
+            font-size: 11px;
+            color: #aaa;
+            opacity: 0.1;               /* 預設隱藏 */
+            transition: opacity 0.3s; /* 平滑顯示 */
+            pointer-events: none;     /* 不阻擋滑鼠事件 */
+        }
+        body:hover #visitors {
+        opacity: 0.6;             /* 滑鼠移上整個頁面才出現 */
+        }
+        </style>
+
+        <div id="visitors">👀瀏覽人次 <span id="count">0</span></div>
+
+        <script>
+        fetch('https://api.countapi.xyz/hit/arvinoops.github.io/HTC_web/visits')
+            .then(res => res.json())
+            .then(data => {
+            document.getElementById('count').innerText = data.value;
+            });
+        </script>
         <!-- Core theme JS-->
         <script src="dist/js/scripts.js"></script>
     </body>
